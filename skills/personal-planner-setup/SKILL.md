@@ -67,12 +67,15 @@ Depois de reiniciar:
 /mcp
 ```
 
-Deve listar `personal-planner` como **connected**. Tools disponíveis:
+Deve listar `personal-planner` como **connected**. Tools disponíveis (8 total):
 
 - `list-tasks-tool`
 - `create-task-tool`
 - `start-task-tool`
+- `pause-task-tool`
 - `complete-task-tool`
+- `reopen-task-tool`
+- `update-task-tool`
 - `get-metrics-tool`
 
 ## Segurança
