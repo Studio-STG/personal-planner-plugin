@@ -1,0 +1,23 @@
+{
+  "name": "personal-planner-marketplace",
+  "owner": {
+    "name": "Jefferson Oliveira",
+    "email": "jefferoidtex7@gmail.com"
+  },
+  "metadata": {
+    "description": "Plugins do Personal Planner — integração MCP com Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "personal-planner",
+      "source": "./",
+      "description": "Conecta o Claude Code ao Personal Planner — cria, inicia e completa tarefas direto do terminal via MCP.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Jefferson Oliveira"
+      },
+      "homepage": "https://planejador.studiostg.com.br",
+      "keywords": ["productivity", "tasks", "planner", "mcp"]
+    }
+  ]
+}

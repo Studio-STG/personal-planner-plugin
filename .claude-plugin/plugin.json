@@ -1,0 +1,38 @@
+{
+  "name": "personal-planner",
+  "version": "1.0.0",
+  "description": "Conecta o Claude Code ao Personal Planner — cria, inicia e completa tarefas direto do terminal via MCP.",
+  "author": {
+    "name": "Jefferson Oliveira",
+    "email": "jefferoidtex7@gmail.com"
+  },
+  "homepage": "https://planejador.studiostg.com.br",
+  "repository": "https://github.com/jeffersonrucu/personal-planner-plugin",
+  "license": "MIT",
+  "keywords": ["productivity", "tasks", "planner", "mcp", "laravel"],
+  "userConfig": {
+    "planner_url": {
+      "type": "string",
+      "title": "URL do servidor MCP",
+      "description": "Endpoint MCP do Personal Planner. Default produção. Override para self-hosted ou dev (ex: http://localhost/mcp).",
+      "default": "https://planejador.studiostg.com.br/mcp",
+      "required": true
+    },
+    "planner_api_token": {
+      "type": "string",
+      "title": "Bearer Token",
+      "description": "Gere em Settings > aba Claude Code no app. O token é armazenado no keychain do sistema.",
+      "sensitive": true,
+      "required": true
+    }
+  },
+  "mcpServers": {
+    "personal-planner": {
+      "type": "http",
+      "url": "${user_config.planner_url}",
+      "headers": {
+        "Authorization": "Bearer ${user_config.planner_api_token}"
+      }
+    }
+  }
+}
